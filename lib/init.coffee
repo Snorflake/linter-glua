@@ -36,7 +36,7 @@
   helpers = require('atom-linter')
   provider =
     grammarScopes: ['source.lua']
-    scope: @scope.toLowerCase()
+    scope: @scope
     lintOnFly: if scope is 'project' then false else not lintOnSave
     lint: (textEditor) =>
       new Promise (resolve, reject) =>
